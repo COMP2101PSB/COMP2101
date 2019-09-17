@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -n "he1b wold" |
-  sed -e "s/b/o/g" -e "s/1/11/" -e "s/ol/orl" |
+  sed -e "s/b/o/" -e "s/1/ll/" -e "s/ol/orl/" |
   tr "h" "H"|
   tr "w" "W"|
   awk '{print $1 "\x20" $2 "\41"}'
