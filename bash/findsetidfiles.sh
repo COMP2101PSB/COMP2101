@@ -20,4 +20,4 @@ echo""
 du -a /var | sort -rh | head -n 10
 du -hsx * | sort -rh | head -10
 du -hsx -- * | sort -rh | head -10
-du -hs */ | sort -nrh | head
+du -hs */ | sort -n -rh | head -10
