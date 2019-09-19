@@ -17,4 +17,4 @@ echo "Setgid files:"
 echo "============="
 find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 3
 echo""
-du -a | sort -n | sort -rh | head -n 10
+find / -type f -print0 | xargs -0 du -h | sort -rh | head -n 10
