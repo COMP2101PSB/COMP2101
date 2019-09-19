@@ -18,4 +18,4 @@ echo "============="
 find / -type f -executable -perm -2000 -ls 2>/dev/null | sort -k 3
 echo""
 du -hsx -- * | sort -rh | head -1
-sudo du -a /home/ | sort -rh | head -n 20
+sudo du -a /home/ | sort -rh | head -n 10
