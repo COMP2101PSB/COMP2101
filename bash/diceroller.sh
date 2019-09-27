@@ -15,3 +15,11 @@ echo "
 Rolling...
 $(( RANDOM % 6 + 1)), $(( RANDOM % 6 + 1 )) rolled
 "
+echo "
+Rolling 5 dice roles of a standard dice:
+$(( RANDOM % 6+1)),$(( RANDOM % 6+1)),$(( RANDOM % 6+1)),$(( RANDOM % 6+1)), AND $(( RANDOM % 6+1)) ROLLED
+"
+echo "
+Rolling a 20 sided dice once:
+$(( RANDOM % 20+1))
+"
