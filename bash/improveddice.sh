@@ -21,3 +21,9 @@ die2=$(( RANDOM % 6 + 1 ))
 sum=$(( die1 + die2 ))
 # display the results
 echo "Rolled $die1, $die2 for a $sum"
+range=$((6))
+bias=$((1))
+die3=$(( RANDOM % range + bias))
+sum1=$(( die1 + die2 + die3 ))
+avg=$((sum1/3))
+echo "Rolled $die1, $die2, and $die3 for a $sum1, and an average of $avg "
