@@ -21,5 +21,5 @@ $(( RANDOM % 6+1)),$(( RANDOM % 6+1)),$(( RANDOM % 6+1)),$(( RANDOM % 6+1)), AND
 "
 echo "
 Rolling a 20 sided dice once:
-$(( RANDOM % 20+1))
+$(( RANDOM % 20+1)) rolled
 "
