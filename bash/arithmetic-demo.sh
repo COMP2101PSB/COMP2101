@@ -17,11 +17,13 @@ multiplication=$((firstnum*secondnum))
 sum=$((firstnum + secondnum))
 dividend=$((firstnum / secondnum))
 fpdividend=$(awk "BEGIN{printf \"%.2f\", $firstnum/$secondnum}")
+modulus=$((firstnum%secondnum))
 
 cat <<EOF
 $firstnum plus $secondnum is $sum
 $firstnum minus $secondnum is $subtract
 $firstnum into $secondnum is $multiplication
+$firstnum mod $secondnum is $modulus
 $firstnum divided by $secondnum is $dividend
-  - More precisely, it is $fpdividend
+  - More precisely, it is $fpdividend and the remainder is $modulus
 EOF
