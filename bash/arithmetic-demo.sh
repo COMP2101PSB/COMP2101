@@ -12,13 +12,16 @@ echo "Please enter a desired number"
 read firstnum
 echo "Please enter another number"
 read secondnum
-
+subtract=$((firstnum - secondnum))
+multiplication=$((firstnum*secondnum))
 sum=$((firstnum + secondnum))
 dividend=$((firstnum / secondnum))
 fpdividend=$(awk "BEGIN{printf \"%.2f\", $firstnum/$secondnum}")
 
 cat <<EOF
 $firstnum plus $secondnum is $sum
+$firstnum minus $secondnum is $subtract
+$firstnum into $secondnum is $multiplication
 $firstnum divided by $secondnum is $dividend
   - More precisely, it is $fpdividend
 EOF
