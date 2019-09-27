@@ -15,7 +15,7 @@
 title="Overlord"
 myname=$USER
 hostname=$(hostname)
-HOUR=$(("date + "%d-%m-%y""))
+HOUR=$(date + "%d-%m-%y")
 
 ###############
 # Main        #
