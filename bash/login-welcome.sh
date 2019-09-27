@@ -15,7 +15,7 @@
 title="Overlord"
 myname=$USER
 hostname=$(hostname)
-HOUR=$(date | awk '{print $4}')
+HOUR=$(date + '%H:%M')
 
 ###############
 # Main        #
