@@ -13,14 +13,14 @@
 # Variables   #
 ###############
 title="Overlord"
-myname="dennis"
-USER=$(hostname)
+myname=$USER
+hostname=$(hostname)
 
 ###############
 # Main        #
 ###############
 cat <<EOF
 
-Welcome to planet $USER, "$title $myname!"
+Welcome to planet $hostname, "$title $myname!"
 
 EOF
