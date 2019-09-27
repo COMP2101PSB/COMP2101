@@ -15,12 +15,14 @@
 title="Overlord"
 myname=$USER
 hostname=$(hostname)
+HOUR=$(("date + "%d-%m-%y""))
 
 ###############
 # Main        #
 ###############
 cat <<EOF
 
-Welcome to planet $hostname, "$title $myname!"
+Welcome to planet $hostname, "$title $myname!
+and the time is $HOUR"
 
 EOF
