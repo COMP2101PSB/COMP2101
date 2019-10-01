@@ -10,14 +10,13 @@
 
 # make a Pictures directory if we don't have one - assumes we have a home directory
 test -d ~/Pictures || mkdir ~/Pictures
-wget https://zonzorp.net/pics.tgz
-tar -xzvf pics.tgz -C ~/Pictures
 # download a zipfile of pictures to our Pictures directory if it isn't already there - assumes you are online
 test -f ~/Pictures/pics.zip || wget -q -O ~/Pictures/pics.zip http://zonzorp.net/pics.zip
 
 # unpack the downloaded zipfile if it is there, then delete the local copy of the zipfile
 test -f ~/Pictures/pics.zip && unzip -d ~/Pictures -o -q ~/Pictures/pics.zip && rm ~/Pictures/pics.zip
-
+test -f ~/Pictures/pics.zip || wget https://zonzorp.net/pics.tgz
+test -f ~/Pictures/pics.zip || tar -xzvf pics.tgz -C ~/Pictures && rm ~/Pictures/pics.zip
 # Make a report on what we have in the Pictures directory
 test -d ~/Pictures && cat <<EOF
 Found $(find ~/Pictures -type f|wc -l) files in the Pictures directory.
