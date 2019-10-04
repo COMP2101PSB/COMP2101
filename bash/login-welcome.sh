@@ -13,16 +13,14 @@
 # Variables   #
 ###############
 title="Overlord"
-myname=$USER
+myname="dennis"
 hostname=$(hostname)
-HOUR=$(date + '%T')
 
 ###############
 # Main        #
 ###############
 cat <<EOF
 
-Welcome to planet $hostname, "$title $myname!
-and the time is $HOUR on "
+Welcome to planet $hostname, "$title $myname!"
 
 EOF
