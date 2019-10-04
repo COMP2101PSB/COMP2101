@@ -19,8 +19,9 @@ hostname=$(hostname)
 ###############
 # Main        #
 ###############
-cat <<EOF
-
+cow="$(cat <<EOF
 Welcome to planet $hostname, "$title $myname!"
-
 EOF
+)"
+
+cowsay -f skeleton "$cow"
