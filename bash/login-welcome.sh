@@ -13,7 +13,7 @@
 # Variables   #
 ###############
 title="Overlord"
-myname="dennis"
+myname="$USER"
 hostname=$(hostname)
 
 ###############
@@ -24,4 +24,4 @@ Welcome to planet $hostname, "$title $myname!"
 EOF
 )"
 
-cowsay -f skeleton "$cow"
+cowsay -f ghostbusters "$cow"
