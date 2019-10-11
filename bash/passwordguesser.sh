@@ -8,26 +8,17 @@
 
 
 referenceString="password"
-read -s -p "Please put in your password:" myString
-echo
-if [ $myString = $referenceString ]; then
-  echo " It is Correct"
-  echo
-  else
-    echo "Try again. You have 2 attempts left"
-    read -s -p "Please put in your password:" myString
-    if [ $myString = $referenceString ]; then
-      echo " It is Correct"
-      echo
-      else
-        echo "Try again. You have 1 attempts left"
-        read -s -p "Please put in your password:" myString
-        if  [ $myString = $referenceString ]; then
-          echo " It is Correct"
-          echo
-          else
-              echo "You failed"
-              echo
-        fi
-      fi
-    fi
+i=3
+while [ $i -gt 0 ]
+do
+echo "Please put in the Password. You have got $i tries"
+read Password
+if [ $referenceString = $Password ]
+then
+  echo " That is the correct password"
+  break
+else
+  echo "Wrong Password"
+fi
+i=$[$i-1]
+done
