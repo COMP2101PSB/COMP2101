@@ -33,10 +33,10 @@
 #   interface_name=$(ip a |awk '/: e/{gsub(/:/,"");print $2}')
 
 MyHostname=$(hostname)
-LanAddress=$(ip a s "$(ip a |awk '/: e/{gsub(/:/,"");print $2}')"|awk '/inet /{gsub(/\/.*/,"");print $2}')
-LanHostname=$(getent hosts "$(ip a s "$(ip a |awk '/: e/{gsub(/:/,"");print $2}')")"|awk '/inet /{gsub(/\/.*/,"");print $2}' | awk '{print $2}')''
+LanAddress=$(ip a s $(ip a |awk '/: e/{gsub(/:/,"");print $2}')|awk '/inet /{gsub(/\/.*/,"");print $2}')
+LanHostname=$(getent hosts $(ip a s $(ip a |awk '/: e/{gsub(/:/,"");print $2}'))|awk '/inet /{gsub(/\/.*/,"");print $2}' | awk '{print $2}')
 ExternalIpAddress=$(curl -s icanhazip.com)
-ExternalName=$(getent hosts $(curl -s icanhazip.com) | awk '{print $2}' )
+ExternalName=$(getent hosts $(curl -s icanhazip.com) | awk '{print $2}')
 RouterAddress=$(ip route show | grep -i 'default via'| awk '{print $3 }')
 RouterName=$(head -1 /etc/hosts | awk '{print $2}')
 NetworkAddress=$(tail -1  /etc/networks | awk '{print $2}')
