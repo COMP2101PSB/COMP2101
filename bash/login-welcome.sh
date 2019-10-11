@@ -18,6 +18,7 @@ hostname=$(hostname)
 
 Hour=$(date +%I)
 Minutes=$(date +%M)
+Seconds=$(date +%s)
 TimeOFDay=$(date +%A)
 Day=$(date +%p)
 
@@ -26,7 +27,7 @@ Day=$(date +%p)
 # Main        #
 ###############
 cow="$(cat <<EOF
-Welcome to planet $hostname, "$title $myname!". The time is $Hour:$Minutes$Day and it is a $TimeOFDay.
+Welcome to planet $hostname, "$title $myname!". The time is $Hour:$Minutes:$Seconds $Day and it is a $TimeOFDay.
 EOF
 )"
 
