@@ -34,7 +34,7 @@ default_router_name=$(getent hosts $default_router_address|awk '{print $2}')
 
 # finding external information relies on curl being installed and relies on live internet connection
 external_address=$(curl -s icanhazip.com)
-external_name=$(getent hosts $external_address | awk '{print $2}')
+external_name=$(getent hosts | awk '{print $2}')
 
 
 cat <<EOF
