@@ -16,10 +16,6 @@ sleepTime=1 # delay used by sleeptime
 numberOfSleeps=10 # how many sleeps to wait for before quitting for inactivity
 
 #### Functions
-function Secret {
-        echo "You found the secret"
-        exit
-}
 # This function will send an error message to stderr
 # Usage:
 #   error-message ["some text to print to stderr"]
@@ -74,7 +70,10 @@ fi
 if [ ! $sleepTime -gt 0 ]; then
     error-exit "$sleepTime is not a valid time to sleep while waiting for signals"
 fi
-
+function Secret {
+        echo "You found the secret"
+        exit
+}
 sleepCount=$numberOfSleeps
 function Reboot {
         echo "You are not allowed to intervene"
