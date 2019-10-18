@@ -8,14 +8,22 @@
 #       to getting out of the script and exit immediately.
 
 # Task: Explain in a comment how the line with the word moose in it works.
-
+trap Reboot SIGINT
+trap Secret SGQUIT
 #### Variables
 programName="$(basename $0)" # used by error_functions.sh
 sleepTime=1 # delay used by sleeptime
 numberOfSleeps=10 # how many sleeps to wait for before quitting for inactivity
 
 #### Functions
-
+function Secret {
+        echo "You found the secret"
+        exit
+}
+function Reboot {
+        echo "You are not allowed to disrupt"
+        sleepCount=$(($numberOfSleeps+1))
+}
 # This function will send an error message to stderr
 # Usage:
 #   error-message ["some text to print to stderr"]
@@ -73,9 +81,5 @@ fi
 
 sleepCount=$numberOfSleeps
 
-while [ $sleepCount -gt 0 ]; do
-    echo "Waiting $sleepCount more times for signals"
-    sleep $sleepTime
-    sleepCount=$((sleepCount - 1))
 done
 echo "Wait counter expired, exiting peacefully"
