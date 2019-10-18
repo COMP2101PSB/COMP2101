@@ -9,7 +9,7 @@
 
 # Task: Explain in a comment how the line with the word moose in it works.
 trap Reboot SIGINT
-trap Secret SGQUIT
+trap Secret SIGQUIT
 #### Variables
 programName="$(basename $0)" # used by error_functions.sh
 sleepTime=1 # delay used by sleeptime
