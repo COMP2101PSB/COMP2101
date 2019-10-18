@@ -24,7 +24,7 @@ Day=$(date +%p)
 
 ###############
 # Main        #
-###############
+############  ###
 cow="$(cat <<EOF
 Welcome to planet $hostname, "$title $myname!". The time is $Hour:$Minutes$Day and it is a $TimeOFDay.
 EOF
